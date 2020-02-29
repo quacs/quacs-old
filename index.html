@@ -26,8 +26,6 @@
       <br>
       note that the check conflict button only checks that class for conflicts and will not check that your current selection does not already have conflicts in it
       <br>
-      also note that it will check conflicts against itself so dont select a section before you check if it has conflicts
-      <br>
       If the button flashes green it does not conflict with any class you have selected. If it flashes red it does.
       <br>
       This website will also account for 6 week courses so if 2 courses happen at the same time but different halfs of the sumemr, they will not be marked as conflicting
@@ -40,7 +38,7 @@
       <div v-for="course in department.courses" style="margin-left:2rem">
         <h5>{{course.Title}}</h5>
         <div v-for="section in course.Sections" style="margin-left:2rem">
-          <button type="button" v-on:click="checkConflict(section.timeslots, $event)">Check Conflict</button>
+          <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
           <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots">
           CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
           <div v-for="time in section.timeslots" style="margin-left:2rem">
@@ -62,9 +60,12 @@
         timeslots: {}
       },
       methods: {
-        checkConflict(times, object) {
+        checkConflict(times, object, crn) {
           for(let i=0;i<Object.keys(app.selected).length;i++){//Check every enabled class
             let key = Object.keys(app.selected)[i]
+            if(crn == key){
+              continue;
+            }
             if(app.selected[key]){//only if it is actually enabled
               for(var j=0;j<times.length;j++){//for every time in the current class
                 for(var k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
