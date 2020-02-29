@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script
+			  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+			  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app">
+    <div v-for="department in courses">
+      <h1>{{department.code}}</h1>
+      <div v-for="course in department.courses" style="margin-left:2rem">
+        <h5>{{course.Title}}</h5>
+        <div v-for="section in course.Sections" style="margin-left:2rem">
+          <button type="button" v-on:click="checkConflict(section.timeslots, $event)">Check Conflict</button>
+          <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots">
+          {{section.CRN}} {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
+          <div v-for="time in section.timeslots" style="margin-left:2rem">
+            <div v-for="day in time.Days" style="margin-left:2rem">
+              {{day}}: {{time.Time_start}}-{{time.Time_end}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        courses: null,
+        selected: {},
+        timeslots: {}
+      },
+      methods: {
+        checkConflict(times, object) {
+          for(let i=0;i<Object.keys(app.selected).length;i++){//Check every enabled class
+            let key = Object.keys(app.selected)[i]
+            if(app.selected[key]){//only if it is actually enabled
+              for(var j=0;j<times.length;j++){//for every time in the current class
+                for(var k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
+                  if(app.timeslots[key][k].Days.some(r=> times[j].Days.includes(r))){
+                    if(app.timeslots[key][k].Time_start == -1 || app.timeslots[key][k].Time_end == -1){
+                      console.log("invalid time")
+                      continue;
+                    }
+                    if(times[j].Time_start >= app.timeslots[key][k].Time_start && times[j].Time_start <= app.timeslots[key][k].Time_end){
+                      console.log("Conflict")
+                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 2000);
+                      return true;
+                    }
+                    if(times[j].Time_end >= app.timeslots[key][k].Time_start && times[j].Time_end <= app.timeslots[key][k].Time_end){
+                      console.log("Conflict")
+                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 2000);
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          console.log("Good")
+          $(event.currentTarget).css({backgroundColor: '#00FF00'}, 'fast').animate({backgroundColor: ''}, 2000);
+        }
+      }
+    })
+
+    $.getJSON('/courses.json', function (json) {
+        app.courses = json.departments;
+    });
+  </script>
+</body>
+</html>
