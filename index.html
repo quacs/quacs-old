@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My first Vue app</title>
+  <title>Quacs</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
@@ -12,14 +12,37 @@
 </head>
 <body>
   <div id="app">
+    <h1>Tutorial:</h1>
+    <p>
+      This website was quickly made because I dont understand how yacs has not been updated yet and I found it very hard to visualize course conflicts without yacs
+      <br>
+      You can view the source code here <a href="https://github.com/elihschiff/quacs">https://github.com/elihschiff/quacs</a>
+      <br>
+      Feel free to make a PR or add an issue. I will try to fix any bugs.
+      <br>
+      To use the website, click the checkbox next to any section of classes to add it to classes you plan on registering for.
+      <br>
+      Then click the check conflict button next to any class to see if it conflicts with all the classes you have currently checked.
+      <br>
+      note that the check conflict button only checks that class for conflicts and will not check that your current selection does not already have conflicts in it
+      <br>
+      also note that it will check conflicts against itself so dont select a section before you check if it has conflicts
+      <br>
+      If the button flashes green it does not conflict with any class you have selected. If it flashes red it does.
+      <br>
+      This website will also account for 6 week courses so if 2 courses happen at the same time but different halfs of the sumemr, they will not be marked as conflicting
+
+    </p>
+
+
     <div v-for="department in courses">
-      <h1>{{department.code}}</h1>
+      <h3>{{department.code}}</h3>
       <div v-for="course in department.courses" style="margin-left:2rem">
         <h5>{{course.Title}}</h5>
         <div v-for="section in course.Sections" style="margin-left:2rem">
           <button type="button" v-on:click="checkConflict(section.timeslots, $event)">Check Conflict</button>
           <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots">
-          {{section.CRN}} {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
+          CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
           <div v-for="time in section.timeslots" style="margin-left:2rem">
             <div v-for="day in time.Days" style="margin-left:2rem">
               {{day}}: {{time.Time_start}}-{{time.Time_end}}
@@ -47,17 +70,26 @@
                 for(var k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
                   if(app.timeslots[key][k].Days.some(r=> times[j].Days.includes(r))){
                     if(app.timeslots[key][k].Time_start == -1 || app.timeslots[key][k].Time_end == -1){
-                      console.log("invalid time")
                       continue;
                     }
+                    if(new Date(times[j].Date_start+"/2020") >= new Date(app.timeslots[key][k].Date_start+"/2020") && new Date(times[j].Date_start+"/2020") <= new Date(app.timeslots[key][k].Date_end+"/2020")){
+                    }else{
+                      continue;
+                    }
+                    if(new Date(times[j].Date_end+"/2020") >= new Date(app.timeslots[key][k].Date_start+"/2020") && new Date(times[j].Date_end+"/2020") <= new Date(app.timeslots[key][k].Date_end+"/2020")){
+                    }else{
+                      continue;
+                    }
+
+
                     if(times[j].Time_start >= app.timeslots[key][k].Time_start && times[j].Time_start <= app.timeslots[key][k].Time_end){
                       console.log("Conflict")
-                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 2000);
+                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
                       return true;
                     }
                     if(times[j].Time_end >= app.timeslots[key][k].Time_start && times[j].Time_end <= app.timeslots[key][k].Time_end){
                       console.log("Conflict")
-                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 2000);
+                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
                       return true;
                     }
                   }
@@ -66,12 +98,12 @@
             }
           }
           console.log("Good")
-          $(event.currentTarget).css({backgroundColor: '#00FF00'}, 'fast').animate({backgroundColor: ''}, 2000);
+          $(event.currentTarget).css({backgroundColor: '#00FF00'}, 'fast').animate({backgroundColor: ''}, 1000);
         }
       }
     })
 
-    $.getJSON('/courses.json', function (json) {
+    $.getJSON('./courses.json', function (json) {
         app.courses = json.departments;
     });
   </script>
