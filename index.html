@@ -100,6 +100,17 @@
                       $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
                       return true;
                     }
+
+                    if(times[j].Time_start <= app.timeslots[key][k].Time_start && times[j].Time_end >= app.timeslots[key][k].Time_start){
+                      console.log("Conflict")
+                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
+                      return true;
+                    }
+                    if(times[j].Time_start <= app.timeslots[key][k].Time_end && times[j].Time_end >= app.timeslots[key][k].Time_end){
+                      console.log("Conflict")
+                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
+                      return true;
+                    }
                   }
                 }
               }
