@@ -40,16 +40,18 @@
     <br><br>
 
     <div v-for="department in courses">
-      <h3>{{department.code}}</h3>
-      <div v-for="course in department.courses" style="margin-left:2rem">
-        <h5>{{course.Title}}</h5>
-        <div v-for="section in course.Sections" style="margin-left:2rem">
-          <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
-          <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
-          CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
-          <div v-for="time in section.timeslots" style="margin-left:2rem">
-            <div v-for="day in time.Days" style="margin-left:2rem">
-              {{day}}: {{time.Time_start}}-{{time.Time_end}}
+      <h3 onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}</h3>
+      <div class="course-container" style="display: none;">
+        <div v-for="course in department.courses" style="margin-left:2rem">
+          <h5>{{course.Title}}</h5>
+          <div v-for="section in course.Sections" style="margin-left:2rem">
+            <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
+            <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
+            CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
+            <div v-for="time in section.timeslots" style="margin-left:2rem">
+              <div v-for="day in time.Days" style="margin-left:2rem">
+                {{day}}: {{time.Time_start}}-{{time.Time_end}}
+              </div>
             </div>
           </div>
         </div>
