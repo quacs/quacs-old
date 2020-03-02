@@ -76,6 +76,7 @@
               continue;
             }
             if(app.selected[key]){//only if it is actually enabled
+              let has_conflict = [];
               for(var j=0;j<times.length;j++){//for every time in the current class
                 for(var k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
                   if(app.timeslots[key][k].Days.some(r=> times[j].Days.includes(r))){
@@ -93,28 +94,24 @@
 
 
                     if(times[j].Time_start >= app.timeslots[key][k].Time_start && times[j].Time_start <= app.timeslots[key][k].Time_end){
-                      console.log("Conflict")
-                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
-                      return true;
-                    }
-                    if(times[j].Time_end >= app.timeslots[key][k].Time_start && times[j].Time_end <= app.timeslots[key][k].Time_end){
-                      console.log("Conflict")
-                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
-                      return true;
-                    }
-
-                    if(times[j].Time_start <= app.timeslots[key][k].Time_start && times[j].Time_end >= app.timeslots[key][k].Time_start){
-                      console.log("Conflict")
-                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
-                      return true;
-                    }
-                    if(times[j].Time_start <= app.timeslots[key][k].Time_end && times[j].Time_end >= app.timeslots[key][k].Time_end){
-                      console.log("Conflict")
-                      $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
-                      return true;
+                      has_conflict.push(key);
+                    }else if(times[j].Time_end >= app.timeslots[key][k].Time_start && times[j].Time_end <= app.timeslots[key][k].Time_end){
+                      has_conflict.push(key);
+                    }else if(times[j].Time_start <= app.timeslots[key][k].Time_start && times[j].Time_end >= app.timeslots[key][k].Time_start){
+                      has_conflict.push(key);
+                    }else if(times[j].Time_start <= app.timeslots[key][k].Time_end && times[j].Time_end >= app.timeslots[key][k].Time_end){
+                      has_conflict.push(key);
                     }
                   }
                 }
+              }
+              if(has_conflict.length > 0){
+                // console.log(has_conflict);
+                for(let j = 0;j<has_conflict.length;j++){
+                  console.log("Conflicts with: "+app.crn_to_name[has_conflict[j]])
+                }
+                $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
+                return true;
               }
             }
           }
