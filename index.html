@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quacs</title>
+  <link rel="icon" href="/media/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+  <title>QuACS</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
@@ -12,48 +14,65 @@
 </head>
 <body>
   <div id="app">
-    <h1>Tutorial:</h1>
-    <p>
-      This website was quickly made because I dont understand how yacs has not been updated yet and I found it very hard to visualize course conflicts without yacs
-      <br>
-      You can view the source code here <a href="https://github.com/elihschiff/quacs">https://github.com/elihschiff/quacs</a>
-      <br>
-      Feel free to make a PR or add an issue. I will try to fix any bugs.
-      <br>
-      To use the website, click the checkbox next to any section of classes to add it to classes you plan on registering for.
-      <br>
-      Then click the check conflict button next to any class to see if it conflicts with all the classes you have currently checked.
-      <br>
-      note that the check conflict button only checks that class for conflicts and will not check that your current selection does not already have conflicts in it
-      <br>
-      If the button flashes green it does not conflict with any class you have selected. If it flashes red it does.
-      <br>
-      This website will also account for 6 week courses so if 2 courses happen at the same time but different halfs of the sumemr, they will not be marked as conflicting
 
-    </p>
-    <br><br>
-
-    <h5>you have currently selected:</h5>
-    <div v-for="(val,crn) in selected">
-      <div v-if="val">{{crn_to_name[crn]}}</div>
-    </div>
-    <br><br>
-
-    <div v-for="department in courses">
-      <h3 onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}</h3>
-      <div class="course-container" style="display: none;">
-        <div v-for="course in department.courses" style="margin-left:2rem">
-          <h5>{{course.Title}}</h5>
-          <div v-for="section in course.Sections" style="margin-left:2rem">
-            <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
-            <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
-            CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
-            <div v-for="time in section.timeslots" style="margin-left:2rem">
-              <div v-for="day in time.Days" style="margin-left:2rem">
-                {{day}}: {{time.Time_start}}-{{time.Time_end}}
+    <div class="container">
+      <div class="row">
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+        </div>
+        <div class="col-lg">
+          <div class="alert alert-info" role="alert">
+            <b>NOTE:</b> QuACS is currently showing course schedules for Summer 2020
+          </div>
+          <img src="/media/quacs_logo.png" alt="QuACS logo" height="50">
+          <br>
+          <!--- <h1>Welcome to QuACS!</h1> --->
+          <p>
+            <h3>Welcome to QuACS!</h3>
+            This website was quickly made because I dont understand how yacs has not been updated yet and I found it very hard to visualize course conflicts without yacs
+            <br>
+            You can view the source code here <a href="https://github.com/elihschiff/quacs">https://github.com/elihschiff/quacs</a>. Feel free to make a PR or add an issue. I will try to fix any bugs.
+            <br>
+            - ELi
+          </p>
+          <h3>How to use:</h3>
+          <ul>
+            <li>To use the website, click the checkbox next to any section of classes to add it to classes you plan on registering for.
+            <li>Then, click the check conflict button next to any class to see if it conflicts with any of the classes you have selected.
+            <li>Please notice that the "check conflict" button only checks for conflicts regarding that specific course, but it does not account for any conflicts that may exist between the courses you have already selected.
+            <li>If the button flashes green, that course does not conflict with any of the classes you have selected. If it flashes red, it does conflict.
+            <li>This website will also account for 6 week courses. So, if 2 courses happen at the same time, but during different halves of the sumemr, they will not be marked as conflicting.
+          </ul>
+          <br>
+          <h3>Selected courses:</h3>
+          <div v-for="(val,crn) in selected">
+            <div v-if="val">{{crn}} {{crn_to_name[crn]}}</div>
+          </div>
+          <br>
+          <br>
+          <h3>All courses:</h3>
+          <div v-for="department in courses">
+            <h3 onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}</h3>
+            <div class="course-container" style="display: none;">
+              <div v-for="course in department.courses" style="margin-left:2rem">
+                <h5>{{course.Title}}</h5>
+                <div v-for="section in course.Sections" style="margin-left:2rem">
+                  <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
+                  <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
+                  CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
+                  <div v-for="time in section.timeslots" style="margin-left:2rem">
+                    <div v-for="day in time.Days" style="margin-left:2rem">
+                      {{day}}: {{time.Time_start}}-{{time.Time_end}}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-xs">
         </div>
       </div>
     </div>
