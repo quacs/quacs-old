@@ -33,7 +33,7 @@
             <h3>Welcome to QuACS!</h3>
             This website was quickly made because I dont understand how yacs has not been updated yet and I found it very hard to visualize course conflicts without yacs
             <br>
-            You can view the source code here <a href="https://github.com/elihschiff/quacs">https://github.com/elihschiff/quacs</a>. Feel free to make a PR or add an issue. I will try to fix any bugs.
+            You can view the source code here <a href="https://github.com/quacs/quacs-old">https://github.com/quacs/quacs-old</a>. Feel free to make a PR or add an issue. I will try to fix any bugs.
             <br>
             - ELi
           </p>
@@ -46,27 +46,46 @@
             <li>This website will also account for 6 week courses. So, if 2 courses happen at the same time, but during different halves of the sumemr, they will not be marked as conflicting.
           </ul>
           <br>
-          <h3>Selected courses:</h3>
-          <div v-for="(val,crn) in selected">
-            <div v-if="val">{{crn}} {{crn_to_name[crn]}}</div>
+          <div class="desktop-hide">
+            <h3 style="padding-top:2rem">Selected courses:</h3>
+            <div v-for="(val,crn) in selected">
+              <div v-if="val">{{crn_to_name[crn]}}</div>
+              <div v-if="val" style="margin-left:1rem">{{crn}}</div>
+            </div>
+            <br>
+            <br>
+            <br>
           </div>
-          <br>
-          <br>
-          <h3>All courses:</h3>
-          <div v-for="department in courses">
-            <h3 onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}</h3>
-            <div class="course-container" style="display: none;">
-              <div v-for="course in department.courses" style="margin-left:2rem">
-                <h5>{{course.Title}}</h5>
-                <div v-for="section in course.Sections" style="margin-left:2rem">
-                  <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
-                  <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
-                  CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}
-                  <div v-for="time in section.timeslots" style="margin-left:2rem">
-                    <div v-for="day in time.Days" style="margin-left:2rem">
-                      {{day}}: {{time.Time_start}}-{{time.Time_end}}
+          <div class="row">
+            <div class="col">
+              <h3>All courses:</h3>
+              <div v-for="department in courses">
+                <h3 class="course_title" onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}</h3>
+                <div class="course-container" style="display: none;">
+                  <div v-for="course in department.courses" style="margin-left:2rem">
+                    <h5>{{course.Title}} ({{course.Subj}}-{{course.Crse}})</h5>
+                    <div v-for="section in course.Sections" style="margin-left:2rem">
+                      <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
+                      <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
+                      <label :for="section.CRN">Section: {{section.Sec}}</label>
+                      <br>
+                      <label :for="section.CRN" style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</label>
+                      <div v-for="time in section.timeslots" style="margin-left:2rem">
+                        <div v-for="day in time.Days" style="margin-left:2rem">
+                          <label :for="section.CRN">{{day}}: {{time.Time_start}}-{{time.Time_end}}</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 mobile-hide">
+              <div class="sticky-top">
+                <h3 style="padding-top:2rem">Selected courses:</h3>
+                <div v-for="(val,crn) in selected">
+                  <div v-if="val">{{crn_to_name[crn]}}</div>
+                  <div v-if="val" style="margin-left:1rem">{{crn}}</div>
                 </div>
               </div>
             </div>
@@ -77,6 +96,30 @@
       </div>
     </div>
   </div>
+
+  <style media="screen">
+    .course_title{
+      padding: .25rem;
+    }
+    .course_title:hover{
+      background-color: lightgrey;
+    }
+
+    .desktop-hide{
+      display: none;
+    }
+
+    @media only screen and (max-width: 550px) {
+        /* Put this on elements you dont need on mobile */
+        .mobile-hide {
+            display: none !important;
+        }
+
+        .desktop-hide{
+          display: block;
+        }
+    }
+  </style>
 
   <script>
     var app = new Vue({
