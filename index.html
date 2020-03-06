@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="/quacs-old/media/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/quacs-old/media/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/media/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
   <title>QuACS</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -26,9 +26,8 @@
           <div class="alert alert-info" role="alert">
             <b>NOTE:</b> QuACS is currently showing course schedules for Summer 2020
           </div>
-          <img src="/quacs-old/media/quacs_logo.png" alt="QuACS logo" height="50">
+          <img src="/media/quacs_logo.png" alt="QuACS logo" height="50">
           <br>
-          <!--- <h1>Welcome to QuACS!</h1> --->
           <p>
             <h3>Welcome to QuACS!</h3>
             This website was quickly made because I dont understand how yacs has not been updated yet and I found it very hard to visualize course conflicts without yacs
@@ -67,30 +66,29 @@
                 <div class="course-container" style="display: none;">
                   <div v-for="course in department.courses" style="margin-left:2rem">
                     <h5>{{course.Title}} ({{course.Subj}}-{{course.Crse}})</h5>
-                    <div v-for="section in course.Sections" style="margin-left:2rem">
-                      <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
+                    <label :for="section.CRN"  v-for="section in course.Sections" style="margin-left:2rem; padding:.25rem; margin-bottom:0px"  @mouseleave="removeColors()" @mouseover="checkConflict(section.timeslots, $event, section.CRN)">
                       <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse">
-                      <label :for="section.CRN">Section: {{section.Sec}}</label>
+                      <span :for="section.CRN">Section: {{section.Sec}}</span>
                       <br>
-                      <label :for="section.CRN" style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</label>
+                      <span style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
                       <div v-for="time in section.timeslots" style="margin-left:2rem">
                         <div v-for="day in time.Days" style="margin-left:2rem">
-                          <label :for="section.CRN">{{day}}: {{time.Time_start}}-{{time.Time_end}}</label>
+                          <span>{{day}}: {{time.Time_start}}-{{time.Time_end}}</span>
                         </div>
                       </div>
-                    </div>
+                      <br>
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-3 mobile-hide">
               <div class="sticky-top">
-                <h3 style="padding-top:2rem">Selected courses:</h3>
+                <h3>Selected courses:</h3>
                 <div v-for="(val,crn) in selected">
-                  <div v-if="val">
+                  <div v-if="val" :id="'selected-'+crn" style="padding:.25rem">
                     <div>{{crn_to_name[crn]}}</div>
                     <div style="margin-left:1rem">{{crn}}</div>
-                    <br>
                   </div>
                 </div>
               </div>
@@ -125,6 +123,14 @@
           display: block;
         }
     }
+
+    .red{
+      background-color: red;
+    }
+
+    .green{
+      background-color: #00FF00;
+    }
   </style>
 
   <script>
@@ -134,10 +140,29 @@
         courses: null,
         selected: {},
         crn_to_name: {},
-        timeslots: {}
+        timeslots: {},
+        locked: false
+      },
+      mounted() {
+        if (localStorage.selected) {
+          this.selected = JSON.parse(localStorage.getItem('selected'));
+        }
+      },
+      watch: {
+        selected: {
+          handler() {
+            localStorage.setItem('selected', JSON.stringify(this.selected));
+            console.log(this.selected)
+          },
+          deep: true,
+        }
       },
       methods: {
         checkConflict(times, object, crn) {
+          // if(app.locked){
+          //   return;
+          // }
+          // app.locked = true;
           for(let i=0;i<Object.keys(app.selected).length;i++){//Check every enabled class
             let key = Object.keys(app.selected)[i]
             if(crn == key){
@@ -174,17 +199,24 @@
                 }
               }
               if(has_conflict.length > 0){
-                // console.log(has_conflict);
                 for(let j = 0;j<has_conflict.length;j++){
                   console.log("Conflicts with: "+app.crn_to_name[has_conflict[j]])
+                  $('#selected-'+has_conflict[j]).addClass('red');
+                  // $('#selected-'+has_conflict[j]).css({'background-color': '#FF0000'}, 0).animate({'background-color': '#ffffff'}, 1000);
                 }
-                $(event.currentTarget).css({backgroundColor: '#FF0000'}, 'fast').animate({backgroundColor: ''}, 1000);
+                $(event.currentTarget).addClass('red');
+                // $(event.currentTarget).css({'background-color': '#FF0000'}, 0).animate({'background-color':  '#ffffff'}, 1000);
                 return true;
               }
             }
           }
           console.log("Good")
-          $(event.currentTarget).css({backgroundColor: '#00FF00'}, 'fast').animate({backgroundColor: ''}, 1000);
+          $(event.currentTarget).addClass('green');
+          // $(event.currentTarget).css({'background-color': '#00FF00'}, 0).animate({'background-color': ''}, 1000);
+        },
+        removeColors() {
+          $('.red').removeClass('red');
+          $('.green').removeClass('green');
         }
       }
     })
