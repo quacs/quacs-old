@@ -62,22 +62,24 @@
             <div class="col">
               <h3>All courses:</h3>
               <div v-for="department in courses">
-                <h3 class="course_title" onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}</h3>
+                <h3 class="course_title" onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}: <span style="font-size:15pt">{{department.name}}</span></h3>
                 <div class="course-container" style="display: none;">
                   <div v-for="course in department.courses" style="margin-left:2rem">
                     <h5>{{course.Title}} ({{course.Subj}}-{{course.Crse}})</h5>
-                    <label :for="section.CRN"  v-for="section in course.Sections" style="margin-left:2rem; padding:.25rem; margin-bottom:0px"  @mouseleave="removeColors()" @mouseover="checkConflict(section.timeslots, $event, section.CRN)">
-                      <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse">
-                      <span :for="section.CRN">Section: {{section.Sec}}</span>
-                      <br>
-                      <span style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
-                      <div v-for="time in section.timeslots" style="margin-left:2rem">
-                        <div v-for="day in time.Days" style="margin-left:2rem">
-                          <span>{{day}}: {{time.Time_start}}-{{time.Time_end}}</span>
+                    <template v-for="section in course.Sections">
+                      <label :for="section.CRN" style="margin-left:2rem; padding:.25rem; margin-bottom:0px"  @mouseleave="removeColors()" @mouseover="checkConflict(section.timeslots, $event, section.CRN)">
+                        <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse">
+                        <span :for="section.CRN">Section: {{section.Sec}}</span>
+                        <br>
+                        <span style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
+                        <div v-for="time in section.timeslots" style="margin-left:2rem">
+                          <div v-for="day in time.Days" style="margin-left:2rem">
+                            <span>{{day}}: {{formatTime(time.Time_start)}}-{{formatTime(time.Time_end)}}</span>
+                          </div>
                         </div>
-                      </div>
+                      </label>
                       <br>
-                    </label>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -87,6 +89,9 @@
                 <h3>Selected courses:</h3>
                 <div v-for="(val,crn) in selected">
                   <div v-if="val" :id="'selected-'+crn" style="padding:.25rem">
+                    <button type="button" class="close" v-on:click="removeClass(crn)" title="Remove Class">
+                      <span>&times;</span>
+                    </button>
                     <div>{{crn_to_name[crn]}}</div>
                     <div style="margin-left:1rem">{{crn}}</div>
                   </div>
@@ -217,6 +222,26 @@
         removeColors() {
           $('.red').removeClass('red');
           $('.green').removeClass('green');
+        },
+        removeClass(crn) {
+          app.selected[crn] = false;
+        },
+        formatTime(time) {
+          var hour = Math.floor(time/100)
+          var min = (time%100).toString()
+          var output = ""
+          if(hour > 12){
+            output = ('0' + (hour-12)).slice(-2);
+          }else{
+            output = ('0' + hour).slice(-2);
+          }
+          output+=":"+('0' + min).slice(-2);
+          if(hour > 11){
+            output+="pm";
+          }else{
+            output+="am";
+          }
+          return output;
         }
       }
     })
