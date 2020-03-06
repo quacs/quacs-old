@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="/media/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/quacs-old/media/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/quacs-old/media/favicon.ico" type="image/x-icon" />
   <title>QuACS</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -26,7 +26,7 @@
           <div class="alert alert-info" role="alert">
             <b>NOTE:</b> QuACS is currently showing course schedules for Summer 2020
           </div>
-          <img src="/media/quacs_logo.png" alt="QuACS logo" height="50">
+          <img src="/quacs-old/media/quacs_logo.png" alt="QuACS logo" height="50">
           <br>
           <!--- <h1>Welcome to QuACS!</h1> --->
           <p>
@@ -49,8 +49,11 @@
           <div class="desktop-hide">
             <h3 style="padding-top:2rem">Selected courses:</h3>
             <div v-for="(val,crn) in selected">
-              <div v-if="val">{{crn_to_name[crn]}}</div>
-              <div v-if="val" style="margin-left:1rem">{{crn}}</div>
+              <div v-if="val">
+                <div>{{crn_to_name[crn]}}</div>
+                <div style="margin-left:1rem">{{crn}}</div>
+                <br>
+              </div>
             </div>
             <br>
             <br>
@@ -66,7 +69,7 @@
                     <h5>{{course.Title}} ({{course.Subj}}-{{course.Crse}})</h5>
                     <div v-for="section in course.Sections" style="margin-left:2rem">
                       <button type="button" v-on:click="checkConflict(section.timeslots, $event, section.CRN)">Check Conflict</button>
-                      <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title">
+                      <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse">
                       <label :for="section.CRN">Section: {{section.Sec}}</label>
                       <br>
                       <label :for="section.CRN" style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</label>
@@ -84,8 +87,11 @@
               <div class="sticky-top">
                 <h3 style="padding-top:2rem">Selected courses:</h3>
                 <div v-for="(val,crn) in selected">
-                  <div v-if="val">{{crn_to_name[crn]}}</div>
-                  <div v-if="val" style="margin-left:1rem">{{crn}}</div>
+                  <div v-if="val">
+                    <div>{{crn_to_name[crn]}}</div>
+                    <div style="margin-left:1rem">{{crn}}</div>
+                    <br>
+                  </div>
                 </div>
               </div>
             </div>
