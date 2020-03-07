@@ -63,15 +63,14 @@
               <h3>All courses:</h3>
               <div v-for="department in courses">
                 <h3 class="course_title" onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}: <span style="font-size:15pt">{{department.name}}</span></h3>
-                <div class="course-container" style="display: none;">
-                  <div v-for="course in department.courses" style="margin-left:2rem">
-                    <h5>{{course.Title}} ({{course.Subj}}-{{course.Crse}})</h5>
+                <ul class="course-container list-group list-group-flush" style="display: none;">
+                  <li v-for="course in department.courses" style="margin-left:2rem" class="list-group-item">
+                    <h5><b>{{course.Title}}</b> ({{course.Subj}}-{{course.Crse}}) <a :href="getCatalogUrl(course.Subj, course.Crse)">Catalog</a></h5>
+                    <p>{{getDescription(course.Subj, course.Crse)}}</p>
                     <template v-for="section in course.Sections">
                       <label :for="section.CRN" style="margin-left:2rem; padding:.25rem; margin-bottom:0px"  @mouseleave="removeColors()" @mouseover="checkConflict(section.timeslots, $event, section.CRN)">
-                        <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse">
-                        <span :for="section.CRN">Section: {{section.Sec}}</span>
-                        <br>
-                        <span style="margin-left:2rem">CRN:{{section.CRN}} Dates: {{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
+                        <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse+' (Section: '+section.Sec+')', crn_to_times[section.CRN]=section.timeslots">
+                        <span :for="section.CRN">Section:{{section.Sec}} CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
                         <div v-for="time in section.timeslots" style="margin-left:2rem">
                           <div v-for="day in time.Days" style="margin-left:2rem">
                             <span>{{day}}: {{formatTime(time.Time_start)}}-{{formatTime(time.Time_end)}}</span>
@@ -80,8 +79,8 @@
                       </label>
                       <br>
                     </template>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-3 mobile-hide">
@@ -94,6 +93,11 @@
                     </button>
                     <div>{{crn_to_name[crn]}}</div>
                     <div style="margin-left:1rem">{{crn}}</div>
+                    <div v-for="time in crn_to_times[crn]" style="margin-left:2rem">
+                      <div v-for="day in time.Days" style="margin-left:2rem">
+                        <span>{{day}}: {{formatTime(time.Time_start)}}-{{formatTime(time.Time_end)}}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -145,8 +149,9 @@
         courses: null,
         selected: {},
         crn_to_name: {},
+        crn_to_times: {},
         timeslots: {},
-        locked: false
+        catalog: {}
       },
       mounted() {
         if (localStorage.selected) {
@@ -157,26 +162,22 @@
         selected: {
           handler() {
             localStorage.setItem('selected', JSON.stringify(this.selected));
-            console.log(this.selected)
           },
           deep: true,
         }
       },
       methods: {
         checkConflict(times, object, crn) {
-          // if(app.locked){
-          //   return;
-          // }
-          // app.locked = true;
+          let conflict_found = false;
           for(let i=0;i<Object.keys(app.selected).length;i++){//Check every enabled class
             let key = Object.keys(app.selected)[i]
             if(crn == key){
               continue;
             }
             if(app.selected[key]){//only if it is actually enabled
-              let has_conflict = [];
-              for(var j=0;j<times.length;j++){//for every time in the current class
-                for(var k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
+              let this_conflicts = false;
+              for(let j=0;j<times.length;j++){//for every time in the current class
+                for(let k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
                   if(app.timeslots[key][k].Days.some(r=> times[j].Days.includes(r))){
                     if(app.timeslots[key][k].Time_start == -1 || app.timeslots[key][k].Time_end == -1){
                       continue;
@@ -192,30 +193,27 @@
 
 
                     if(times[j].Time_start >= app.timeslots[key][k].Time_start && times[j].Time_start <= app.timeslots[key][k].Time_end){
-                      has_conflict.push(key);
+                      this_conflicts = true;
                     }else if(times[j].Time_end >= app.timeslots[key][k].Time_start && times[j].Time_end <= app.timeslots[key][k].Time_end){
-                      has_conflict.push(key);
+                      this_conflicts = true;
                     }else if(times[j].Time_start <= app.timeslots[key][k].Time_start && times[j].Time_end >= app.timeslots[key][k].Time_start){
-                      has_conflict.push(key);
+                      this_conflicts = true;
                     }else if(times[j].Time_start <= app.timeslots[key][k].Time_end && times[j].Time_end >= app.timeslots[key][k].Time_end){
-                      has_conflict.push(key);
+                      this_conflicts = true;
                     }
                   }
                 }
               }
-              if(has_conflict.length > 0){
-                for(let j = 0;j<has_conflict.length;j++){
-                  console.log("Conflicts with: "+app.crn_to_name[has_conflict[j]])
-                  $('#selected-'+has_conflict[j]).addClass('red');
-                  // $('#selected-'+has_conflict[j]).css({'background-color': '#FF0000'}, 0).animate({'background-color': '#ffffff'}, 1000);
-                }
+              if(this_conflicts){
+                $('#selected-'+key).addClass('red');
                 $(event.currentTarget).addClass('red');
-                // $(event.currentTarget).css({'background-color': '#FF0000'}, 0).animate({'background-color':  '#ffffff'}, 1000);
-                return true;
+                conflict_found = true;
               }
             }
           }
-          console.log("Good")
+          if(conflict_found){
+            return;
+          }
           $(event.currentTarget).addClass('green');
           // $(event.currentTarget).css({'background-color': '#00FF00'}, 0).animate({'background-color': ''}, 1000);
         },
@@ -227,9 +225,9 @@
           app.selected[crn] = false;
         },
         formatTime(time) {
-          var hour = Math.floor(time/100)
-          var min = (time%100).toString()
-          var output = ""
+          let hour = Math.floor(time/100)
+          let min = (time%100).toString()
+          let output = ""
           if(hour > 12){
             output = ('0' + (hour-12)).slice(-2);
           }else{
@@ -242,12 +240,28 @@
             output+="am";
           }
           return output;
+        },
+        getDescription(subject, code){
+          let output = ""
+          if(subject+'-'+code in app.catalog)
+            output+=app.catalog[subject+'-'+code].description + ' '
+          if(subject+'-'+code in app.catalog)
+            output+=app.catalog[subject+'-'+code].pre_req + ' '
+
+          return output
+        },
+        getCatalogUrl(subject, code){
+          if(subject+'-'+code in app.catalog)
+            return app.catalog[subject+'-'+code].url
         }
       }
     })
 
     $.getJSON('./courses.json', function (json) {
         app.courses = json.departments;
+    });
+    $.getJSON('./catalog.json', function (json) {
+        app.catalog = json;
     });
   </script>
 </body>
