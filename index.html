@@ -27,6 +27,9 @@
             <b>NOTE:</b> QuACS is currently showing course schedules for Summer 2020
           </div>
           <img src="/media/quacs_logo.png" alt="QuACS logo" height="50">
+          <!-- <a href="https://www.cs.rpi.edu/~upe/" style="float:right">
+            <img src="/media/upe.png" alt="Join UPE">
+          </a> -->
           <br>
           <p>
             <h3>Welcome to QuACS!</h3>
@@ -180,10 +183,9 @@
                       continue;
                     }
                     if(new Date(times[j].Date_start+"/2020") >= new Date(app.timeslots[key][k].Date_start+"/2020") && new Date(times[j].Date_start+"/2020") <= new Date(app.timeslots[key][k].Date_end+"/2020")){
-                    }else{
-                      continue;
-                    }
-                    if(new Date(times[j].Date_end+"/2020") >= new Date(app.timeslots[key][k].Date_start+"/2020") && new Date(times[j].Date_end+"/2020") <= new Date(app.timeslots[key][k].Date_end+"/2020")){
+                    }else if(new Date(times[j].Date_end+"/2020") >= new Date(app.timeslots[key][k].Date_start+"/2020") && new Date(times[j].Date_end+"/2020") <= new Date(app.timeslots[key][k].Date_end+"/2020")){
+                    }else if(new Date(times[j].Date_start+"/2020") <= new Date(app.timeslots[key][k].Date_start+"/2020") && new Date(times[j].Date_end+"/2020") >= new Date(app.timeslots[key][k].Date_start+"/2020")){
+                    }else if(new Date(times[j].Date_start+"/2020") <= new Date(app.timeslots[key][k].Date_end+"/2020") && new Date(times[j].Date_end+"/2020") >= new Date(app.timeslots[key][k].Date_end+"/2020")){
                     }else{
                       continue;
                     }
