@@ -47289,6 +47289,726 @@
             "name": "Industrial And Systems Engr"
         },
         {
+            "code": "ITWS",
+            "courses": [
+                {
+                    "Crse": 1100,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28958,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1100,
+                            "Rem": 30,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Intro To It & Web Science",
+                            "WL_Act": 0,
+                            "WL_Cap": 10,
+                            "WL_Rem": 10,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "Richard M. Plotka (P)",
+                                    "Location": "LALLY 102",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "TBA",
+                                    "Location": "EATON 214",
+                                    "Time_end": 1950,
+                                    "Time_start": 1800
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "R"
+                                    ],
+                                    "Instructor": "Richard M. Plotka (P)",
+                                    "Location": "LALLY 102",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "INTRO TO IT & WEB SCIENCE"
+                },
+                {
+                    "Crse": 2110,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 27709,
+                            "Cap": 25,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 2110,
+                            "Rem": 25,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Web Systems Development",
+                            "WL_Act": 0,
+                            "WL_Cap": 10,
+                            "WL_Rem": 10,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Brian Robert Callahan (P)",
+                                    "Location": "LALLY 102",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 29147,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 2110,
+                            "Rem": 30,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Web Systems Development",
+                            "WL_Act": 0,
+                            "WL_Cap": 10,
+                            "WL_Rem": 10,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Brian Robert Callahan (P)",
+                                    "Location": "VORHES SO",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "WEB SYSTEMS DEVELOPMENT"
+                },
+                {
+                    "Crse": 4100,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive",
+                            "CRN": 25913,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4100,
+                            "Rem": 30,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "It & Web Science Capstone",
+                            "WL_Act": 0,
+                            "WL_Cap": 20,
+                            "WL_Rem": 20,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Richard M. Plotka (P)",
+                                    "Location": "LALLY 102",
+                                    "Time_end": 1750,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "IT & WEB SCIENCE CAPSTONE"
+                },
+                {
+                    "Crse": 4310,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 25870,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4310,
+                            "Rem": 30,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Managing It Resources",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Matthew John Grill (P)",
+                                    "Location": "LALLY 102",
+                                    "Time_end": 950,
+                                    "Time_start": 800
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 30140,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4310,
+                            "Rem": 30,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Managing It Resources",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "TBA",
+                                    "Location": "TBA",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "MANAGING IT RESOURCES"
+                },
+                {
+                    "Crse": 4600,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 29535,
+                            "Cap": 5,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 4600,
+                            "Rem": 5,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Data Analytics",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Thilanka Munasinghe (P)",
+                                    "Location": "LALLY 02",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "DATA ANALYTICS"
+                },
+                {
+                    "Crse": 4700,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28543,
+                            "Cap": 20,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 4700,
+                            "Rem": 20,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Software Development",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "F"
+                                    ],
+                                    "Instructor": "Ying Liu (P)",
+                                    "Location": "J-ROWL 2C25",
+                                    "Time_end": 1450,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "SOFTWARE DEVELOPMENT"
+                },
+                {
+                    "Crse": 4960,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28611,
+                            "Cap": 5,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 4960,
+                            "Rem": 5,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Itws Database Systems",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "W"
+                                    ],
+                                    "Instructor": "Samuel Bernt Johnson (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 1850,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "ITWS DATABASE SYSTEMS"
+                },
+                {
+                    "Crse": 4967,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 29674,
+                            "Cap": 10,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4967,
+                            "Rem": 10,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Modern Binary Exploitation",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Brian Robert Callahan (P)",
+                                    "Location": "LOW 3112",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "MODERN BINARY EXPLOITATION"
+                },
+                {
+                    "Crse": 6300,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 26094,
+                            "Cap": 5,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6300,
+                            "Rem": 5,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Business Issues For Engineers And Scientists",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "F"
+                                    ],
+                                    "Instructor": "Kevin R. Stewart (P)",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1150,
+                                    "Time_start": 900
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "BUSINESS ISSUES FOR ENGINEERS AND SCIENTISTS"
+                },
+                {
+                    "Crse": 6350,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28012,
+                            "Cap": 15,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6350,
+                            "Rem": 15,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Data Science",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "R"
+                                    ],
+                                    "Instructor": "Thilanka Munasinghe (P)",
+                                    "Location": "LALLY 104",
+                                    "Time_end": 1350,
+                                    "Time_start": 1100
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "DATA SCIENCE"
+                },
+                {
+                    "Crse": 6440,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 29534,
+                            "Cap": 16,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6440,
+                            "Rem": 16,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Big Data Policy",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "Kathleen Sturey Fontaine (P)",
+                                    "Location": "LALLY 104",
+                                    "Time_end": 1350,
+                                    "Time_start": 1100
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "BIG DATA POLICY"
+                },
+                {
+                    "Crse": 6600,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 29552,
+                            "Cap": 27,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6600,
+                            "Rem": 27,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Data Analytics",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Thilanka Munasinghe (P)",
+                                    "Location": "LALLY 02",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "DATA ANALYTICS"
+                },
+                {
+                    "Crse": 6700,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28542,
+                            "Cap": 20,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6700,
+                            "Rem": 20,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Software Development",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "F"
+                                    ],
+                                    "Instructor": "Ying Liu (P)",
+                                    "Location": "J-ROWL 2C25",
+                                    "Time_end": 1450,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "SOFTWARE DEVELOPMENT"
+                },
+                {
+                    "Crse": 6800,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 27581,
+                            "Cap": 10,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6800,
+                            "Rem": 10,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "It Master'S Capstone",
+                            "WL_Act": 0,
+                            "WL_Cap": 5,
+                            "WL_Rem": 5,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Richard M. Plotka (P)",
+                                    "Location": "LALLY 102",
+                                    "Time_end": 1750,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "IT MASTER'S CAPSTONE"
+                },
+                {
+                    "Crse": 6960,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28612,
+                            "Cap": 25,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6960,
+                            "Rem": 25,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "ITWS",
+                            "Title": "Itws Database Systems",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "W"
+                                    ],
+                                    "Instructor": "Samuel Bernt Johnson (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 1850,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "ITWS",
+                    "Title": "ITWS DATABASE SYSTEMS"
+                }
+            ],
+            "name": "Information Technlgy & Web Sci"
+        },
+        {
             "code": "ISCI",
             "courses": [
                 {
