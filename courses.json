@@ -10097,7 +10097,7 @@
                                         "W",
                                         "F"
                                     ],
-                                    "Instructor": "Douglas Martin Swank (P)",
+                                    "Instructor": "Lee Ligon (P)",
                                     "Location": "J-ROWL 2C13",
                                     "Time_end": 1720,
                                     "Time_start": 1600
@@ -54320,6 +54320,190 @@
                 }
             ],
             "name": "Materials Science &Engineering"
+        },
+        {
+            "code": "MATP",
+            "courses": [
+                {
+                    "Crse": 4600,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 25654,
+                            "Cap": 60,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4600,
+                            "Rem": 60,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "MATP",
+                            "Title": "Prob Theory & Applications",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Chjan C Lim (P)",
+                                    "Location": "RCKTTS 211",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "MATP",
+                    "Title": "PROB THEORY & APPLICATIONS"
+                },
+                {
+                    "Crse": 4700,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 25655,
+                            "Cap": 60,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4700,
+                            "Rem": 60,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "MATP",
+                            "Title": "Math Models Of Operations",
+                            "WL_Act": 0,
+                            "WL_Cap": 13,
+                            "WL_Rem": 13,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "John E. Mitchell (P)",
+                                    "Location": "SAGE 5510",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "MATP",
+                    "Title": "MATH MODELS OF OPERATIONS"
+                },
+                {
+                    "Crse": 4910,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 30154,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 4910,
+                            "Rem": 30,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "MATP",
+                            "Title": "Data Analytics Research",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "W"
+                                    ],
+                                    "Instructor": "Kristin P Bennett (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 1150,
+                                    "Time_start": 900
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "R"
+                                    ],
+                                    "Instructor": "TBA",
+                                    "Location": "TBA",
+                                    "Time_end": 950,
+                                    "Time_start": 900
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "MATP",
+                    "Title": "DATA ANALYTICS RESEARCH"
+                },
+                {
+                    "Crse": 6600,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 25656,
+                            "Cap": 20,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 6600,
+                            "Rem": 20,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "MATP",
+                            "Title": "Introduction To Optimization",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Rongjie Lai (P)",
+                                    "Location": "CARNEG 210",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "MATP",
+                    "Title": "INTRODUCTION TO OPTIMIZATION"
+                }
+            ],
+            "name": "Math Prgmg, Probab,& Math Stat"
         },
         {
             "code": "MATH",
