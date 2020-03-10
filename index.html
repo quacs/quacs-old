@@ -47,7 +47,7 @@
           <br>
           <div class="desktop-hide">
             <h3 style="padding-top:2rem">Selected courses:</h3>
-            <div v-for="(val,crn) in selected">
+            <div v-for="(val,crn) in selected.courses">
               <div v-if="val">
                 <div>{{crn_to_name[crn]}}</div>
                 <div style="margin-left:1rem">{{crn}}</div>
@@ -69,7 +69,7 @@
                     <p>{{getDescription(course.Subj, course.Crse)}}</p>
                     <template v-for="section in course.Sections">
                       <label :for="section.CRN" style="margin-left:2rem; padding:.25rem; margin-bottom:0px"  @mouseleave="removeColors()" @mouseover="checkConflict(section.timeslots, $event, section.CRN)">
-                        <input type="checkbox" :id="section.CRN" v-model="selected[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse+' (Section: '+section.Sec+')', crn_to_times[section.CRN]=section.timeslots">
+                        <input type="checkbox" :id="section.CRN" v-model="selected.courses[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse+' (Section: '+section.Sec+')', crn_to_times[section.CRN]=section.timeslots">
                         <span :for="section.CRN">Section:{{section.Sec}} CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
                         <div v-for="time in section.timeslots" style="margin-left:2rem">
                           <div v-for="day in time.Days" style="margin-left:2rem">
@@ -86,7 +86,7 @@
             <div class="col-3 mobile-hide">
               <div class="sticky-top">
                 <h3>Selected courses:</h3>
-                <div v-for="(val,crn) in selected">
+                <div v-for="(val,crn) in selected.courses">
                   <div v-if="val" :id="'selected-'+crn" style="padding:.25rem">
                     <button type="button" class="close" v-on:click="removeClass(crn)" title="Remove Class">
                       <span>&times;</span>
@@ -151,11 +151,16 @@
         crn_to_name: {},
         crn_to_times: {},
         timeslots: {},
-        catalog: {}
+        catalog: {},
+        version: 'fall-20-v1'
       },
       mounted() {
         if (localStorage.selected) {
           this.selected = JSON.parse(localStorage.getItem('selected'));
+          if(!this.selected['version'] || this.selected['version'] != this.version){
+            this.selected = {'version':this.version, 'courses':{}};
+            localStorage.setItem('selected', JSON.stringify(this.selected));
+          }
         }
       },
       watch: {
@@ -169,12 +174,12 @@
       methods: {
         checkConflict(times, object, crn) {
           let conflict_found = false;
-          for(let i=0;i<Object.keys(app.selected).length;i++){//Check every enabled class
-            let key = Object.keys(app.selected)[i]
+          for(let i=0;i<Object.keys(app.selected.courses).length;i++){//Check every enabled class
+            let key = Object.keys(app.selected.courses)[i]
             if(crn == key){
               continue;
             }
-            if(app.selected[key]){//only if it is actually enabled
+            if(app.selected.courses[key]){//only if it is actually enabled
               let this_conflicts = false;
               for(let j=0;j<times.length;j++){//for every time in the current class
                 for(let k=0;k<app.timeslots[key].length;k++){//for every time in the enabled class
@@ -221,7 +226,7 @@
           $('.green').removeClass('green');
         },
         removeClass(crn) {
-          app.selected[crn] = false;
+          app.selected.courses[crn] = false;
         },
         formatTime(time) {
           let hour = Math.floor(time/100)
