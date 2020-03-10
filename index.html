@@ -157,10 +157,13 @@
       mounted() {
         if (localStorage.selected) {
           this.selected = JSON.parse(localStorage.getItem('selected'));
-          if(!this.selected['version'] || this.selected['version'] != this.version){
+          if(this.selected == null || this.selected == "" || !this.selected['version'] || this.selected['version'] != this.version){
             this.selected = {'version':this.version, 'courses':{}};
             localStorage.setItem('selected', JSON.stringify(this.selected));
           }
+        }else{
+          this.selected = {'version':this.version, 'courses':{}};
+          localStorage.setItem('selected', JSON.stringify(this.selected));
         }
       },
       watch: {
