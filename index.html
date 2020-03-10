@@ -73,7 +73,7 @@
                         <span :for="section.CRN">Section:{{section.Sec}} CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
                         <div v-for="time in section.timeslots" style="margin-left:2rem">
                           <div v-for="day in time.Days" style="margin-left:2rem">
-                            <span>{{day}}: {{formatTime(time.Time_start)}}-{{formatTime(time.Time_end)}}</span>
+                            <span>{{day}}: {{formatTime(time.Time_start)}}-{{formatTime(time.Time_end)}} ({{time.Instructor}})</span>
                           </div>
                         </div>
                       </label>
