@@ -33,7 +33,7 @@
           <br>
           <p>
             <h3>Welcome to QuACS!</h3>
-            QuACS the questionably accurate course scheduler, is an alternative to yacs but our goal is to update as soon as sis releases the schedule for a semester. Sure yacs has more features, but while you wait for yacs to update why not use QuACS.
+            QuACS the QUestionably Accurate Course Scheduler, is an alternative to yacs but our goal is to update as soon as sis releases the schedule for a semester. Sure yacs has more features, but while you wait for yacs to update why not use QuACS.
             <br>
             QuACS and the scrapers we use to collect the data are open source. View the code here <a href="https://github.com/quacs">https://github.com/quacs</a>. Feel free to make a PR or add an issue.
             <br>
@@ -65,12 +65,12 @@
                 <h3 class="course_title" onclick="$(this).parent().children('.course-container').slideToggle()" style="cursor: pointer;">{{department.code}}: <span style="font-size:15pt">{{department.name}}</span></h3>
                 <ul class="course-container list-group list-group-flush" style="display: none;">
                   <li v-for="course in department.courses" style="margin-left:2rem" class="list-group-item">
-                    <h5><b>{{course.Title}}</b> ({{course.Subj}}-{{course.Crse}}) <a :href="getCatalogUrl(course.Subj, course.Crse)">Catalog</a></h5>
+                    <h5><b>{{course.Title}}</b> ({{course.Subj}}-{{course.Crse}}) <a :href="getCatalogUrl(course.Subj, course.Crse)" target="_blank" rel="noopener noreferrer">Catalog</a></h5>
                     <p>{{getDescription(course.Subj, course.Crse)}}</p>
                     <template v-for="section in course.Sections">
                       <label :for="section.CRN" style="margin-left:2rem; padding:.25rem; margin-bottom:0px"  @mouseleave="removeColors()" @mouseover="checkConflict(section.timeslots, $event, section.CRN)">
                         <input type="checkbox" :id="section.CRN" v-model="selected.courses[section.CRN]" v-bind="timeslots[section.CRN]=section.timeslots, crn_to_name[section.CRN] = section.Title+' '+section.Subj+'-'+section.Crse+' (Section: '+section.Sec+')', crn_to_times[section.CRN]=section.timeslots">
-                        <span :for="section.CRN">Section:{{section.Sec}} CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}}</span>
+                        <span :for="section.CRN">Section:{{section.Sec}} CRN:{{section.CRN}} Dates:{{section.timeslots[0].Date_start}}-{{section.timeslots[0].Date_end}} <a :href="'https://sis.rpi.edu/rss/bwckschd.p_disp_detail_sched?term_in=202009&crn_in='+section.CRN" target="_blank" rel="noopener noreferrer">View prereqs on sis</a></span>
                         <div v-for="time in section.timeslots" style="margin-left:2rem">
                           <div v-for="day in time.Days" style="margin-left:2rem">
                             <span>{{day}}: {{formatTime(time.Time_start)}}-{{formatTime(time.Time_end)}} ({{time.Instructor}})</span>
