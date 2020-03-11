@@ -48009,6 +48009,1758 @@
             "name": "Information Technlgy & Web Sci"
         },
         {
+            "code": "IHSS",
+            "courses": [
+                {
+                    "Crse": 1110,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28104,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1110,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Nature/Society",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal (P)",
+                                    "Location": "DNASN 130",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "F"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal (P)",
+                                    "Location": "DNASN 130",
+                                    "Time_end": 1650,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "NATURE/SOCIETY"
+                },
+                {
+                    "Crse": 1140,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28102,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1140,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Minds And Machines",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Bram Van Heuveln",
+                                    "Location": "SAGE 2704",
+                                    "Time_end": 1520,
+                                    "Time_start": 1400
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "Bram Van Heuveln (P), John R Milanese",
+                                    "Location": "SAGE 3303",
+                                    "Time_end": 2020,
+                                    "Time_start": 1900
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28103,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1140,
+                            "Rem": 19,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Minds And Machines",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Bram Van Heuveln",
+                                    "Location": "SAGE 2707",
+                                    "Time_end": 1720,
+                                    "Time_start": 1600
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "Bram Van Heuveln (P), John R Milanese",
+                                    "Location": "SAGE 3303",
+                                    "Time_end": 2020,
+                                    "Time_start": 1900
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28960,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1140,
+                            "Rem": 19,
+                            "Sec": "03",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Minds And Machines",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "John R Milanese",
+                                    "Location": "SAGE 4711",
+                                    "Time_end": 1520,
+                                    "Time_start": 1400
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "John R Milanese (P), Bram Van Heuveln",
+                                    "Location": "SAGE 3303",
+                                    "Time_end": 2020,
+                                    "Time_start": 1900
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28961,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1140,
+                            "Rem": 19,
+                            "Sec": "04",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Minds And Machines",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "John R Milanese",
+                                    "Location": "SAGE 4711",
+                                    "Time_end": 1720,
+                                    "Time_start": 1600
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M"
+                                    ],
+                                    "Instructor": "John R Milanese (P), Bram Van Heuveln",
+                                    "Location": "SAGE 3303",
+                                    "Time_end": 2020,
+                                    "Time_start": 1900
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "MINDS AND MACHINES"
+                },
+                {
+                    "Crse": 1150,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29590,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1150,
+                            "Rem": 30,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "The Genome And You",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Susan Lynn Smith (P)",
+                                    "Location": "SAGE 2704",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "THE GENOME AND YOU"
+                },
+                {
+                    "Crse": 1170,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive",
+                            "CRN": 30196,
+                            "Cap": 40,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1170,
+                            "Rem": 40,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "History Of Animation",
+                            "WL_Act": 0,
+                            "WL_Cap": 4,
+                            "WL_Rem": 4,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Silvia Ruzanka (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "HISTORY OF ANIMATION"
+                },
+                {
+                    "Crse": 1175,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29743,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1175,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Well-Being:Cultivtng Curiosity",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Alicia Ann Walf (P)",
+                                    "Location": "WEST 326",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "WELL-BEING:CULTIVTNG CURIOSITY"
+                },
+                {
+                    "Crse": 1180,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29770,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1180,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "The Art Of Listening",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Stephanie D Loveless (P)",
+                                    "Location": "WEST 326",
+                                    "Time_end": 950,
+                                    "Time_start": 800
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29771,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1180,
+                            "Rem": 19,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "The Art Of Listening",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Stephanie D Loveless (P)",
+                                    "Location": "WEST 326",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "THE ART OF LISTENING"
+                },
+                {
+                    "Crse": 1200,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29462,
+                            "Cap": 300,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1200,
+                            "Rem": 300,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Principles Of Economics",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Sarah Marsden Parrales (P)",
+                                    "Location": "SAGE 3303",
+                                    "Time_end": 950,
+                                    "Time_start": 800
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29463,
+                            "Cap": 300,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1200,
+                            "Rem": 300,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Principles Of Economics",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Sarah Marsden Parrales (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "PRINCIPLES OF ECONOMICS"
+                },
+                {
+                    "Crse": 1235,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29778,
+                            "Cap": 100,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1235,
+                            "Rem": 100,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Are Humans Rational?",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Selmer Bringsjord (P)",
+                                    "Location": "DARRIN 337",
+                                    "Time_end": 1750,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "ARE HUMANS RATIONAL?"
+                },
+                {
+                    "Crse": 1240,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28953,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1240,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Sustainability Debates",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal (P)",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1450,
+                                    "Time_start": 1400
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1550,
+                                    "Time_start": 1500
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29138,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1240,
+                            "Rem": 19,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Sustainability Debates",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal (P)",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1450,
+                                    "Time_start": 1400
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1550,
+                                    "Time_start": 1500
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29139,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1240,
+                            "Rem": 19,
+                            "Sec": "03",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Sustainability Debates",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal (P)",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1450,
+                                    "Time_start": 1400
+                                },
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Jennifer Cardinal",
+                                    "Location": "TROY 2018",
+                                    "Time_end": 1550,
+                                    "Time_start": 1500
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "SUSTAINABILITY DEBATES"
+                },
+                {
+                    "Crse": 1300,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29140,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1300,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Race And Film In Us Culture And History",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Maryanne Staniszewski (P)",
+                                    "Location": "WEST 113",
+                                    "Time_end": 1750,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "RACE AND FILM IN US CULTURE AND HISTORY"
+                },
+                {
+                    "Crse": 1350,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29317,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1350,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Law, Values, And Public Policy",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Lawrence Eliot Howard (P)",
+                                    "Location": "SAGE 4112",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "LAW, VALUES, AND PUBLIC POLICY"
+                },
+                {
+                    "Crse": 1410,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29318,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1410,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Century Of The Gene",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Kate Elizabeth Sohasky (P)",
+                                    "Location": "CARNEG 106",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "CENTURY OF THE GENE"
+                },
+                {
+                    "Crse": 1430,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29777,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1430,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Health Of Contemp Africa",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Cynthia Theresa Cook (P)",
+                                    "Location": "LOW 3045",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "HEALTH OF CONTEMP AFRICA"
+                },
+                {
+                    "Crse": 1560,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29736,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1560,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Media And Society",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Christopher C. Jeansonne (P)",
+                                    "Location": "RCKTTS 208",
+                                    "Time_end": 950,
+                                    "Time_start": 800
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29737,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1560,
+                            "Rem": 19,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Media And Society",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Christopher C. Jeansonne (P)",
+                                    "Location": "RCKTTS 208",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "MEDIA AND SOCIETY"
+                },
+                {
+                    "Crse": 1610,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 26742,
+                            "Cap": 29,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1610,
+                            "Rem": 29,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Design And Innovation Studio I",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Raquel Velho (P)",
+                                    "Location": "SAGE 2211",
+                                    "Time_end": 1650,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "DESIGN AND INNOVATION STUDIO I"
+                },
+                {
+                    "Crse": 1666,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29634,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1666,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Religion In A Global World",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Patrick Y Royer (P)",
+                                    "Location": "DARRIN 235",
+                                    "Time_end": 1750,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "RELIGION IN A GLOBAL WORLD"
+                },
+                {
+                    "Crse": 1700,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29774,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1700,
+                            "Rem": 30,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Songwriting Workshop",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Ross A. Rice (P)",
+                                    "Location": "WEST 214",
+                                    "Time_end": 1750,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "SONGWRITING WORKSHOP"
+                },
+                {
+                    "Crse": 1710,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29776,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1710,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Popular Music & Society",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Kathleen A. Galloway (P)",
+                                    "Location": "WEST 326",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "POPULAR MUSIC & SOCIETY"
+                },
+                {
+                    "Crse": 1720,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29772,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1720,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Music And Nature",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Stephanie D Loveless (P)",
+                                    "Location": "WEST 214",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "MUSIC AND NATURE"
+                },
+                {
+                    "Crse": 1958,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29788,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1958,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Tech & The Top Ten",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Ross A. Rice (P)",
+                                    "Location": "WEST 118",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "TECH & THE TOP TEN"
+                },
+                {
+                    "Crse": 1960,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and Introductory Level Course",
+                            "CRN": 28290,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1960,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Game Sound & Musical Play",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/11",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "TBA",
+                                    "Location": "WEST 211",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "GAME SOUND & MUSICAL PLAY"
+                },
+                {
+                    "Crse": 1961,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28881,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1961,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Designing Climate Justice",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Jarah W. Moesch (P)",
+                                    "Location": "SAGE 2701",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "DESIGNING CLIMATE JUSTICE"
+                },
+                {
+                    "Crse": 1962,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive",
+                            "CRN": 28882,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1962,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Writing For Global Audiences",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/11",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "TBA",
+                                    "Location": "TBA",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "WRITING FOR GLOBAL AUDIENCES"
+                },
+                {
+                    "Crse": 1969,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29333,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1969,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "History Of Design",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Sara L. Tack (P)",
+                                    "Location": "SAGE 3205",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "HISTORY OF DESIGN"
+                },
+                {
+                    "Crse": 1972,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29591,
+                            "Cap": 100,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1972,
+                            "Rem": 100,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Ai And Society",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Ralph G Noble (P), Mei Si",
+                                    "Location": "SAGE 3510",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "AI AND SOCIETY"
+                },
+                {
+                    "Crse": 1973,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 28910,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1973,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "News Media, Culture & Politics",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "Maryanne Staniszewski (P)",
+                                    "Location": "WEST 113",
+                                    "Time_end": 1550,
+                                    "Time_start": 1400
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "NEWS MEDIA, CULTURE & POLITICS"
+                },
+                {
+                    "Crse": 1975,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29592,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1975,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Understanding Empathy",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Alicia Ann Walf (P)",
+                                    "Location": "SAGE 5711",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "UNDERSTANDING EMPATHY"
+                },
+                {
+                    "Crse": 1976,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 28956,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1976,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Fiction From Film To Internet",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "M",
+                                        "R"
+                                    ],
+                                    "Instructor": "James P Zappen (P)",
+                                    "Location": "SAGE 3205",
+                                    "Time_end": 1150,
+                                    "Time_start": 1000
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "FICTION FROM FILM TO INTERNET"
+                },
+                {
+                    "Crse": 1978,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29781,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1978,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "The American Dream",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Skye Anicca (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 950,
+                                    "Time_start": 800
+                                }
+                            ]
+                        },
+                        {
+                            "Act": 0,
+                            "Attribute": "Communication Intensive and HASS Inquiry",
+                            "CRN": 29782,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1978,
+                            "Rem": 19,
+                            "Sec": "02",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "The American Dream",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T",
+                                        "F"
+                                    ],
+                                    "Instructor": "Skye Anicca (P)",
+                                    "Location": "TBA",
+                                    "Time_end": 1350,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "THE AMERICAN DREAM"
+                },
+                {
+                    "Crse": 1987,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "HASS Inquiry",
+                            "CRN": 29786,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 4.0,
+                            "Cred_min": 4.0,
+                            "Crse": 1987,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Behind The Tv Screen",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "W"
+                                    ],
+                                    "Instructor": "Elizabeth Press (P)",
+                                    "Location": "DARRIN 174",
+                                    "Time_end": 1550,
+                                    "Time_start": 1200
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "BEHIND THE TV SCREEN"
+                },
+                {
+                    "Crse": 6570,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 29959,
+                            "Cap": 19,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6570,
+                            "Rem": 19,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Research Methods",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T"
+                                    ],
+                                    "Instructor": "Michael L. Century (P)",
+                                    "Location": "WEST 113",
+                                    "Time_end": 1550,
+                                    "Time_start": 1300
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "RESEARCH METHODS"
+                },
+                {
+                    "Crse": 6960,
+                    "Sections": [
+                        {
+                            "Act": 0,
+                            "Attribute": "",
+                            "CRN": 28858,
+                            "Cap": 30,
+                            "Cmp": "T",
+                            "Cred_max": 3.0,
+                            "Cred_min": 3.0,
+                            "Crse": 6960,
+                            "Rem": 30,
+                            "Sec": "01",
+                            "Select": "NR",
+                            "Subj": "IHSS",
+                            "Title": "Advanced Social Theory",
+                            "WL_Act": 0,
+                            "WL_Cap": 0,
+                            "WL_Rem": 0,
+                            "XL_Act": "0",
+                            "XL_Cap": "0",
+                            "XL_Rem": "0",
+                            "timeslots": [
+                                {
+                                    "Date_end": "12/21",
+                                    "Date_start": "08/31",
+                                    "Days": [
+                                        "T"
+                                    ],
+                                    "Instructor": "James Wilson Malazita (P)",
+                                    "Location": "SAGE 3713",
+                                    "Time_end": 1850,
+                                    "Time_start": 1600
+                                }
+                            ]
+                        }
+                    ],
+                    "Subj": "IHSS",
+                    "Title": "ADVANCED SOCIAL THEORY"
+                }
+            ],
+            "name": "Interdisciplinary H&Ss"
+        },
+        {
             "code": "ISCI",
             "courses": [
                 {
